@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="PhysicsStats" load_steps=2 format=3 uid="uid://iepykpirmf0d"]
+
+[ext_resource type="Script" uid="uid://bt6r38w65xfo" path="res://entities/characters/player/resources/PhysicsStats.gd" id="1_emy1r"]
+
+[resource]
+script = ExtResource("1_emy1r")
+metadata/_custom_type_script = "uid://bt6r38w65xfo"

@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg6kwrrpgyrip"]
+
+[ext_resource type="PackedScene" uid="uid://cxhd0hl3ambe8" path="res://entities/characters/player/mc.tscn" id="1_432jf"]
+[ext_resource type="Texture2D" uid="uid://ijuqf7a2gadu" path="res://levels/test_level/Textures/goegap_4k.exr" id="2_45yub"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_qohb2"]
+panorama = ExtResource("2_45yub")
+
+[sub_resource type="Sky" id="Sky_0sl58"]
+sky_material = SubResource("PanoramaSkyMaterial_qohb2")
+
+[sub_resource type="Environment" id="Environment_nsx0l"]
+background_mode = 2
+sky = SubResource("Sky_0sl58")
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="mc" parent="." instance=ExtResource("1_432jf")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nsx0l")

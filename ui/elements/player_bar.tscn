@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://c15k081f73ae2"]
+
+[ext_resource type="Script" uid="uid://dir6s616gp2eq" path="res://game/clippcorp framework/UI/CCFbar.gd" id="1_tc1nx"]
+[ext_resource type="Texture2D" uid="uid://duk7tm80iygud" path="res://game/clippcorp framework/UI/textures/NinePachtBarUnder.png" id="2_3iaxe"]
+[ext_resource type="Texture2D" uid="uid://deao3wratsiy2" path="res://game/clippcorp framework/UI/textures/NinePatchBar.png" id="2_a5p2v"]
+[ext_resource type="Texture2D" uid="uid://cmb0n05fif5jt" path="res://game/clippcorp framework/UI/textures/NinePachtBarProgress.png" id="3_1nien"]
+[ext_resource type="Texture2D" uid="uid://e215oerem5gp" path="res://game/clippcorp framework/UI/icons/none.png" id="5_3iaxe"]
+
+[node name="Bar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 896.0
+offset_bottom = 128.0
+script = ExtResource("1_tc1nx")
+
+[node name="Mask" type="NinePatchRect" parent="."]
+clip_children = 2
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = ExtResource("2_3iaxe")
+patch_margin_left = 145
+patch_margin_top = 32
+patch_margin_right = 32
+patch_margin_bottom = 96
+axis_stretch_horizontal = 2
+
+[node name="Indicator" type="NinePatchRect" parent="Mask"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 123.0
+offset_right = -27.0
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = ExtResource("3_1nien")
+patch_margin_right = 21
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 1
+
+[node name="Border" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+texture = ExtResource("2_a5p2v")
+patch_margin_left = 145
+patch_margin_right = 32
+axis_stretch_horizontal = 2
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_3iaxe")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://em7sj2yf6teo"]
+
+[ext_resource type="Script" path="res://game/clippcorp framework/UI/CCFUI.gd" id="1_sm1dl"]
+[ext_resource type="PackedScene" uid="uid://c15k081f73ae2" path="res://ui/elements/player_bar.tscn" id="2_0ljjo"]
+
+[node name="CCFUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_sm1dl")
+metadata/_custom_type_script = "uid://eduslycfa2wn"
+
+[node name="healthBar" parent="." instance=ExtResource("2_0ljjo")]
+layout_mode = 0
+offset_right = 176.0
+scale = Vector2(0.5, 0.5)
+meterKey = "health"
+
+[node name="StaminaBar" parent="." instance=ExtResource("2_0ljjo")]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 176.0
+offset_bottom = 192.0
+scale = Vector2(0.5, 0.5)
+meterKey = "stamina"
+
+[node name="AmmoBar" parent="." instance=ExtResource("2_0ljjo")]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 176.0
+offset_bottom = 256.0
+scale = Vector2(0.5, 0.5)
+meterKey = "ammo"

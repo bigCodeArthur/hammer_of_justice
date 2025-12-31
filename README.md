@@ -1,5 +1,7 @@
 ```
-res://─ audio/
+
+res://
+├── audio/
 │   ├── music/
 │   └── effects/
 ├── config/
@@ -32,5 +34,6 @@ res://─ audio/
 │   ├── scripts/
 │   └── scenes/
 └── helpers/
-    └── {helper_name}.gd
+	└── {helper_name}.gd
+
 ```
